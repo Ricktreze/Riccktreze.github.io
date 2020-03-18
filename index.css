@@ -78,10 +78,9 @@
  body{
    
    background-image: url("https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/84521542_845643485860328_326887555716874240_n.png?_nc_cat=106&_nc_sid=85a577&_nc_ohc=30ZCdujeoBEAX-Sr4h8&_nc_ht=scontent-gru2-2.xx&oh=77b32b44cf614197ae30555921cbd01e&oe=5E982E68");
- 
-   /* background-image: url("https://i.pinimg.com/736x/6a/77/df/6a77dfe30c9dde1e87ce752b72e8cf5a.jpg"); */
    background-size: 90%;
    background-repeat: no-repeat;
    background-position: relative;
+   background-position: bottom;
    
  }
