@@ -52,7 +52,7 @@
  div{
     /* background-color: rgb(113, 155, 131); */
     list-style-type: none;
-    margin-top: 10%;
+    margin-top: 5%;
     height: 100%;
 
     
@@ -75,12 +75,11 @@
    }
 
 
- body{
-   
+ body{   
    background-image: url("https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/84521542_845643485860328_326887555716874240_n.png?_nc_cat=106&_nc_sid=85a577&_nc_ohc=30ZCdujeoBEAX-Sr4h8&_nc_ht=scontent-gru2-2.xx&oh=77b32b44cf614197ae30555921cbd01e&oe=5E982E68");
-   background-size: 90%;
+   background-size: 30%; 
+   background-position:bottom; 
    background-repeat: no-repeat;
-   background-position: relative;
-   background-position: bottom;
+
    
  }
