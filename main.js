@@ -38,14 +38,13 @@ var toprod = 0;
               inputEl.setAttribute('maxlength','2');
               inputEl.setAttribute('class','nobolo');
             }
+            inputEl.setAttribute("onChange","retValCalc(" + toprod + ")"); 
             var buttonEl = document.createElement('a');
-            var txtConfirma = document.createTextNode('Confirma');
             var linkHist = document.createElement('a');
             var txtLinkHist = document.createTextNode('Histórico');
             var brasaoEl    = document.createTextNode("R$");
             console.log("listaProdutos",produtos[toprod].resultProd);
             var txtResult = document.createTextNode(produtos[toprod].resultProd);
-    
             buttonEl.setAttribute('href','#')
             linkHist.setAttribute('href','historico.html')
             linkHist.appendChild(txtLinkHist);
@@ -56,16 +55,13 @@ var toprod = 0;
             liProd.appendChild(brasaoEl);
             liProd.appendChild(txtResult);
             liProd.appendChild(linkHist);
-      
-            //liProd.appendChild(divLiEl);
-            buttonEl.appendChild(txtConfirma);
             inputEl.setAttribute('id',toprod); 
             linkHist.setAttribute('id',toprod);          
             formEl.appendChild(liProd);
             produtos[toprod].id = toprod;
             nomeHist =  produtos[toprod].nome
            
-            buttonEl.setAttribute("onclick","retValCalc(" + toprod + ")");
+           // buttonEl
             //linkHist.setAttribute("onclick","addTabelaHist(" + toprod + ","+linkHist+" )");
             
               linkHist.onclick = () =>{
