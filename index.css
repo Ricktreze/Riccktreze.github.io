@@ -36,7 +36,7 @@
     /* height: 100%; */
     position: center;
     padding: 0,5%;
-    padding-right: 15%;
+    padding-right: 10%;
     margin: 1%;
     position: relative;
     left: 5%;
@@ -52,7 +52,7 @@
    text-align: right;
    color: rgb(71, 38, 23);
    font-family:'Times New Roman', Times, serif;
-   font-size: 200%;
+   font-size: 120%;
    opacity: unset;
    position: relative;    
 
