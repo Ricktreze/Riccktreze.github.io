@@ -38,7 +38,9 @@ var toprod = 0;
               inputEl.setAttribute('maxlength','2');
               inputEl.setAttribute('class','nobolo');
             }
-            inputEl.setAttribute("onChange","retValCalc(" + toprod + ")"); 
+            inputEl.setAttribute("onblur","retValCalc(" + toprod + ") "); 
+            inputEl.setAttribute("type","number"); 
+            // inputEl.setAttribute("onkeup",");
             var buttonEl = document.createElement('a');
             var linkHist = document.createElement('a');
             var txtLinkHist = document.createTextNode('Histórico');

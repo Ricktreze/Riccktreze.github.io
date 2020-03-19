@@ -11,13 +11,13 @@
    list-style-type: none;
    border-bottom-style:hidden;
    color: blanchedalmond;
-   font-size: 130%;
+   font-size: 100%;
    opacity: 30%;
  }
  .nobolo {
     
    width: 5%; 
-   height: 60%;
+   height: 50%;
    background-color: black;
    position: center;
    padding: 0,5%;
@@ -27,7 +27,7 @@
    list-style-type: none;
    border-bottom-style:hidden;
    color: blanchedalmond;
-   font-size: 130%;
+   font-size: 100%;
    opacity: 30%;
 }
  a {
@@ -44,6 +44,16 @@
     font-size: 50%;
     color: rgb(71, 38, 23);
     
+ }
+ .imgHome{
+    width: 70%;
+    margin-top: -60;
+   
+ }
+ .txtHome{
+
+   width: 100%;   
+
  }
  label{
    float: left; 
@@ -80,9 +90,9 @@
    li{
       color: rgb(236, 6, 6);
       font-family:'Courier New', Courier, monospace;
-      padding-left: 10%;
       font-size: 200%;
       height: 10%;
+      width: 150%;
    }
 
 .divInf{
@@ -91,8 +101,9 @@
    background-size: 100%;
    width: 50%;   
    height: 15%;
-   margin-top: 5%;
+   margin-top: 15%;
    margin-left: 25%;
+   position: initial,;   
 }
 
 #repo-Form{
@@ -108,10 +119,27 @@ table{
    width: 50%;
    margin: 0 auto;
    text-align: center;
+   position: relative;   
+   background-color: white;
 }
 
 .homePage{
-   width: 50%;
-   font-size: 400%;
-   left: 40%;
+   width: 10%;
+   margin-top: 5%;
+   font-size: 200%;
+   margin-left: 70%;
+  
+}
+
+#form-hist{
+   height: 10%;
+}
+
+#imgdelete{
+   width: 30%;
+
+}
+
+#colDelete{
+   width: 10%;
 }

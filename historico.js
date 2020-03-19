@@ -36,12 +36,15 @@ function addTabelaHist(nomeHist,linkHist){
                 cell4.innerHTML = `Valor Venda: ${Hitorico[contHist].result}`;
 
                 var linkHistEl = document.createElement('a');                
-                var txtLinkHist = document.createTextNode('Excluir');
-
+                // var txtLinkHist = document.createTextNode('Excluir');
+                var txtLinkHist = document.createElement('img');
+                txtLinkHist.setAttribute("src","img/delete.png")
+                txtLinkHist.setAttribute("id","imgdelete")
                 linkHistEl.appendChild(txtLinkHist);
                 linkHistEl.setAttribute('href','#');
                
                 var cell5 = row.insertCell(4);
+                cell5.setAttribute("id","colDelete");
                 cell5.appendChild(linkHistEl);
 
                 linkHistEl.setAttribute('onclick','delHist('+contHist+')');

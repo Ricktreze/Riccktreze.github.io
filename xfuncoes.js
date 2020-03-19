@@ -1,21 +1,21 @@
-function retValCalc(pas){    
-   var liaux = document.getElementById(pas);   
-   var aux =  parseFloat(liaux.getElementsByTagName("input")[0].value);
-    console.log("retValCalc antes foreach",produtos);
-   produtos.forEach(function(item) {
-    if (item.id == pas){
-        var auxNumb = item.resultProd + (aux*item.valorVendido);        
-        item.resultProd = parseFloat(auxNumb.toFixed(2));
-    }   
-   
-  })
+function retValCalc(pas){ 
+    
 
-  console.log("retValCalc depois foreach",produtos);
-   saveProdutos(produtos);
-   var valHist = (aux*produtos[pas].valorVendido)
-   valHist = parseFloat(valHist.toFixed(2));
-   addHistorico(pas,aux,valHist);
-   listaProdutos();
+    var liaux = document.getElementById(pas);   
+    var aux =  parseFloat(liaux.getElementsByTagName("input")[0].value);
+    produtos.forEach(function(item) {
+        if (item.id == pas){
+            var auxNumb = item.resultProd + (aux*item.valorVendido);        
+            item.resultProd = parseFloat(auxNumb.toFixed(2));
+        }   
+    
+    })
+
+    saveProdutos(produtos);
+    var valHist = (aux*produtos[pas].valorVendido)
+    valHist = parseFloat(valHist.toFixed(2));
+    addHistorico(pas,aux,valHist);
+    listaProdutos();
 }  ;
  
 function criaProdutos(){
