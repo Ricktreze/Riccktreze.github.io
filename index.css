@@ -123,12 +123,12 @@ h1{
 
 table{
    width: 90%;
-   height: auto;
+   height: 110%;
    margin: 0 auto;
    text-align: center;
    position: relative;   
    background-color: white;
-   font-size: 130%;
+   font-size: 170%;
 }
 
 .homePage{
