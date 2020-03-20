@@ -166,7 +166,7 @@ table{
    margin-top: -5.5%;
    width: 10%;
    height: auto;
-   margin-left:  39%;
+   margin-left:  44%;
    padding-left: 2%;
 
 }
@@ -187,7 +187,7 @@ table{
    width: 200%;
    height: auto;
    font-size: 350%;
-   margin-left: 450%;
+   margin-left: 490%;
    margin-top: -55;
 }
 
@@ -207,14 +207,13 @@ table{
 
 #limpaBase{
    position: relative;
-   width: 15%;
-   height: 15%;
-   margin-left: 2%;
-   color: red;
+   margin-left: 1%;
 
 }
 #inputLimpaBase{
    background-image: url('img/deletIcon.png');
+   width: 5%;
+   height: 3%;
    background-size: 100%;
    background-repeat: no-repeat;
 }
