@@ -72,7 +72,7 @@
     list-style-type: none;
     background-color:rgb(255, 255, 255);
     width: 85%;   
-    margin-left: 20%;
+    /* margin-left: 20%; */
     text-align: center;
     margin-right: 30%;
     padding-left: 5%;
@@ -96,25 +96,22 @@
    background-image: url("img/inf.png");
    background-size: 100%;
    width: 100%;
-   height: auto;   
-   height: 15%;
-   margin-top: 130%;
+   height: 10%; 
+   margin-top: 5%;
    margin-left: 20%;
    position: initial;   
+   background-repeat: no-repeat;
 }
 
 #repo-Form{
-   position: absolute;
+   position: relative;
    margin-top: 5%;
-   margin-left: 10%;
-   width: 100%;
-   height: 100%;
    list-style-type: none;
 }
 
 body{
   
-   object-position: center;
+   object-position: left;
 }
 
 h1{
@@ -183,9 +180,9 @@ table{
 
 #divHist{
    position: absolute; 
-   width: 35%;
+   width: 100%;
    height: auto;
-   font-size: 250%;
+   font-size: 350%;
    margin-left: 420%;
    margin-top: -60;
 }
