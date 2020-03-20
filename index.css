@@ -1,23 +1,6 @@
 .bolo {
     
-   width: 5%; 
-   height: auto;
-    background-color: black;
-   position: center;
-   padding: 0,5%;
-   margin: 1%;
-   position: relative;
-   left: 5%;
-   list-style-type: none;
-   border-bottom-style:hidden;
-   color: blanchedalmond;
-   font-size: 100%;
-   opacity: 30%;
-   text-align: center;
- }
- .nobolo {
-    
-   width: 5%; 
+   width: 10%; 
    height: auto;
    background-color: black;
    position: center;
@@ -30,7 +13,24 @@
    color: blanchedalmond;
    font-size: 100%;
    opacity: 30%;
-   text-align: center;
+   text-align: left;
+ }
+ .nobolo {
+    
+   width: 10%; 
+   height: auto;
+   background-color: black;
+   position: center;
+   padding: 0,5%;
+   margin: 1%;
+   position: relative;
+   left: 5%;
+   list-style-type: none;
+   border-bottom-style:hidden;
+   color: blanchedalmond;
+   font-size: 100%;
+   opacity: 30%;
+   text-align: left;
 }
  a {
     position: center;
@@ -203,4 +203,18 @@ table{
 
 #imgTotalLink{
    width: 50%;
+}
+
+#limpaBase{
+   position: relative;
+   width: 15%;
+   height: 15%;
+   margin-left: 2%;
+   color: red;
+
+}
+#inputLimpaBase{
+   background-image: url('img/deletIcon.png');
+   background-size: 100%;
+   background-repeat: no-repeat;
 }

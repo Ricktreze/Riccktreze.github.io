@@ -3,15 +3,8 @@ function retValCalc(pas){
 
     var liaux = document.getElementById(pas);   
     var aux =  parseFloat(liaux.getElementsByTagName("input")[0].value);
-    if(aux > 0){  
-        // produtos.forEach(function(item) {
-        //     if (item.id == pas){
-        //         var auxNumb = item.resultProd + (aux*item.valorVendido);        
-        //         item.resultProd = parseFloat(auxNumb.toFixed(2));
-        //     }    
+    if(aux > 0){   
         totalOk();
-        
-      //  })
        saveProdutos(produtos);
         var valHist = (aux*produtos[pas].valorVendido)
         valHist = parseFloat(valHist.toFixed(2));
@@ -60,13 +53,15 @@ function criaProdutos(){
 function addHistorico(pas,aux,valorHist){
     var data = new Date();
     let Hitorico = JSON.parse(localStorage.getItem('historico')) || [];
-    Hitorico.push({
-        Nome: produtos[pas].nome, 
-        hora: `${String(data.getHours())}:${String(data.getMinutes())}:${String(data.getSeconds())} `, 
-        valorCompra: aux,       
-        result: valorHist
-    })
-    saveHistorico(Hitorico)
+    if(Hitorico.lenght > 0){
+        Hitorico.push({
+            Nome: produtos[pas].nome, 
+            hora: `${String(data.getHours())}:${String(data.getMinutes())}:${String(data.getSeconds())} `, 
+            valorCompra: aux,       
+            result: valorHist
+        })
+        saveHistorico(Hitorico)
+    }
 return 
 }
 
@@ -102,7 +97,7 @@ function saveHistorico(historico){
     for (nInput in produtos){ 
       aux = parseInt(document.getElementsByTagName('input')[nInput].value);  
       if(aux > 0){   
-        produtos[nInput].resultProd += (produtos[nInput].valorVendido * aux);
+        produtos[nInput].resultProd += parseInt((produtos[nInput].valorVendido * aux).toFixed(2));
         let valHist = (aux*produtos[nInput].valorVendido)
         valHist = parseFloat(valHist.toFixed(2));
         addHistorico(nInput,aux,valHist);
@@ -113,4 +108,11 @@ function saveHistorico(historico){
  }
 
 
-
+function limpaBase(){
+    saveProdutos([]);
+    saveHistorico({});
+    savePosic(0);    
+    listaProdutos();
+    window.location.reload();
+    
+}
