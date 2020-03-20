@@ -152,8 +152,8 @@ table{
 
 #divMenos{
    margin-left: 28%;
-   margin-top: -5%;
-   width: 5%;
+   margin-top: -3%;
+   width: 6%;
    height: auto;
    margin-left:  30%;
    padding-left: 2%;
@@ -162,8 +162,8 @@ table{
 
 #divMais{
 
-   margin-top: -2.5%;
-   width: 5%;
+   margin-top: -3%;
+   width: 6%;
    height: auto;
    margin-left:  40%;
    padding-left: 2%;
@@ -182,13 +182,12 @@ table{
 }
 
 #divHist{
-   position: relative; 
-   width: 30%;
-   height: 30%;
-   font-size: 150%;
-   margin-left: 39%;
-   top: -45 ; 
-   color: red;
+   position: absolute; 
+   width: 35%;
+   height: auto;
+   font-size: 250%;
+   margin-left: 420%;
+   margin-top: -60;
 }
 
 
