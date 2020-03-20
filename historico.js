@@ -36,7 +36,6 @@ function addTabelaHist(nomeHist,linkHist){
                 cell4.innerHTML = `Valor Venda: ${Hitorico[contHist].result}`;
 
                 var linkHistEl = document.createElement('a');                
-                // var txtLinkHist = document.createTextNode('Excluir');
                 var txtLinkHist = document.createElement('img');
                 txtLinkHist.setAttribute("src","img/delete.png")
                 txtLinkHist.setAttribute("id","imgdelete")

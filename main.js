@@ -13,21 +13,17 @@ var toprod = 0;
     var pos = 0;
     
     var produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-    console.log("Json",JSON.parse(localStorage.getItem('produtos')) || [])
+
     if (produtos.length == 0){
-      console.log("Tamanho zero", produtos)
-      produtos = criaProdutos();
-      console.log("Cria PRodutos", produtos)
+      produtos = criaProdutos();  
     }
 
     function listaProdutos(){
       if (formEl != null){
         formEl.innerHTML = ''
-        console.log("antes do for",produtos);
         for(let toprod in produtos){
             
             var liProd = document.createElement('li')
-           // var txtProd = document.createTextNode(produtos[toprod].nome);
             var txtProd = document.createElement("label");
             txtProd.innerHTML = produtos[toprod].nome;
             inputEl = document.createElement('input');
@@ -40,37 +36,76 @@ var toprod = 0;
             }
             inputEl.setAttribute("onblur","retValCalc(" + toprod + ") "); 
             inputEl.setAttribute("type","number"); 
-            // inputEl.setAttribute("onkeup",");
             var buttonEl = document.createElement('a');
             var linkHist = document.createElement('a');
-            var txtLinkHist = document.createTextNode('Histórico');
-            var brasaoEl    = document.createTextNode("R$");
-            console.log("listaProdutos",produtos[toprod].resultProd);
-            var txtResult = document.createTextNode(produtos[toprod].resultProd);
-            buttonEl.setAttribute('href','#')
-            linkHist.setAttribute('href','historico.html')
-            linkHist.appendChild(txtLinkHist);
+            var divMenos = document.createElement('div');
+            var linkDivMenos = document.createElement('a');
+            var imgMenos  = document.createElement('img');
+            var imgMais  = document.createElement('img');
+            var divMais = document.createElement('div');
+            var linkDivMais = document.createElement('a');
+            var divHist = document.createElement('div');
+            var inputHist = document.createElement('a');
+            inputHist.setAttribute('id','inputHist');
+            inputHist.setAttribute('href','historico.html');
+            inputHist.textContent = "R$ " + produtos[toprod].resultProd
+            
+            divHist.setAttribute('id','divHist');
+            divHist.appendChild(inputHist);
+           
+            divMenos.appendChild(linkDivMenos);
+            divMais.appendChild(linkDivMais);
+            imgMenos.setAttribute('src','img/menosIcon.png');
+            imgMais.setAttribute('id','imgMais');
+            imgMais.setAttribute('src','img/maisIcon.png');
+            imgMenos.setAttribute('id','imgMenos');
+            linkDivMenos.setAttribute('href','#');
+            divMenos.setAttribute('id','divMenos');
+            linkDivMenos.setAttribute('onclick',"subtraiHist(" + toprod + ")");
+            linkDivMais.setAttribute('onclick',"somaHist(" + toprod + ")");
+            linkDivMenos.appendChild(imgMenos);
+            linkDivMais.appendChild(imgMais);
+            linkDivMais.setAttribute('href','#');
+            divMais.setAttribute('id','divMais');
+            buttonEl.setAttribute('href','#');
             liProd.setAttribute("id",String(toprod));           
             liProd.appendChild(txtProd);
             liProd.appendChild(inputEl);
             liProd.appendChild(buttonEl);
-            liProd.appendChild(brasaoEl);
-            liProd.appendChild(txtResult);
             liProd.appendChild(linkHist);
+            if(txtProd.innerHTML != "Bolo"){
+              liProd.appendChild(divMenos);
+              liProd.appendChild(divMais);
+            }
             inputEl.setAttribute('id',toprod); 
-            linkHist.setAttribute('id',toprod);          
+            linkHist.setAttribute('id',toprod);  
+            linkHist.appendChild(divHist);        
             formEl.appendChild(liProd);
             produtos[toprod].id = toprod;
             nomeHist =  produtos[toprod].nome
            
-           // buttonEl
-            //linkHist.setAttribute("onclick","addTabelaHist(" + toprod + ","+linkHist+" )");
             
               linkHist.onclick = () =>{
                 savePosic(toprod);
                
               } ;
           }
+
+          var divTotalLink = document.createElement('div');
+          var aTotalLink = document.createElement('a');
+          var imgTotalLink = document.createElement('img');
+
+          divTotalLink.setAttribute('id','divTotalLink');
+          aTotalLink.setAttribute('id','aTotalLink');
+          aTotalLink.setAttribute('href','#');
+          imgTotalLink.setAttribute('id','imgTotalLink');
+          imgTotalLink.setAttribute('src','img/okIcon.png');
+          aTotalLink.setAttribute('onclick','totalOk()');
+          aTotalLink.appendChild(imgTotalLink);
+          divTotalLink.appendChild(aTotalLink);
+          
+          formEl.appendChild(divTotalLink);
+
       }  
     }
   

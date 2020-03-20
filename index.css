@@ -1,7 +1,7 @@
 .bolo {
     
-    width: 7%; 
-    height: 50%;
+   width: 5%; 
+   height: auto;
     background-color: black;
    position: center;
    padding: 0,5%;
@@ -13,11 +13,12 @@
    color: blanchedalmond;
    font-size: 100%;
    opacity: 30%;
+   text-align: center;
  }
  .nobolo {
     
    width: 5%; 
-   height: 50%;
+   height: auto;
    background-color: black;
    position: center;
    padding: 0,5%;
@@ -29,11 +30,9 @@
    color: blanchedalmond;
    font-size: 100%;
    opacity: 30%;
+   text-align: center;
 }
  a {
-    
-    /* width: 10%; */
-    /* height: 100%; */
     position: center;
     padding: 0,5%;
     padding-right: 10%;
@@ -59,6 +58,7 @@
    float: left; 
    width: 30%;
    height: 50%;
+   margin-top: 1%;
    text-align: right;
    color: rgb(71, 38, 23);
    font-family:'Times New Roman', Times, serif;
@@ -102,7 +102,7 @@
    width: 50%;   
    height: 15%;
    margin-top: 15%;
-   margin-left: 25%;
+   margin-left: 32%;
    position: initial,;   
 }
 
@@ -142,4 +142,62 @@ table{
 
 #colDelete{
    width: 10%;
+}
+
+#divMenos{
+   margin-left: 28%;
+   margin-top: -4.8%;
+   /* border-style: dotted; */
+   width: 3%;
+   height: auto;
+   margin-left:  30%;
+   padding-left: 2%;
+     
+}
+
+#divMais{
+
+   margin-top: -1.5%;
+   /* border-style: dotted; */
+   width: 3%;
+   height: auto;
+   margin-left:  40%;
+   padding-left: 2%;
+
+}
+
+#imgMenos{
+   width: 50%;
+   position: center; 
+}
+
+
+#imgMais{
+   width: 50%;
+   position: relative; 
+}
+
+#divHist{
+   position: relative; 
+   width: 30%;
+   height: 30%;
+   font-size: 150%;
+   margin-left: 39%;
+   top: -45 ; 
+   color: red;
+}
+
+
+#divTotalLink{
+   /* border-style: dotted; */
+   width: 5%;
+   height: 5%;
+   margin-left:  54%;
+   margin-top: 3%;
+   padding-left: 2%;
+}
+
+
+#imgTotalLink{
+   width: 50%;
 }

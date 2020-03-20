@@ -3,19 +3,21 @@ function retValCalc(pas){
 
     var liaux = document.getElementById(pas);   
     var aux =  parseFloat(liaux.getElementsByTagName("input")[0].value);
-    produtos.forEach(function(item) {
-        if (item.id == pas){
-            var auxNumb = item.resultProd + (aux*item.valorVendido);        
-            item.resultProd = parseFloat(auxNumb.toFixed(2));
-        }   
-    
-    })
-
-    saveProdutos(produtos);
-    var valHist = (aux*produtos[pas].valorVendido)
-    valHist = parseFloat(valHist.toFixed(2));
-    addHistorico(pas,aux,valHist);
-    listaProdutos();
+    if(aux > 0){  
+        // produtos.forEach(function(item) {
+        //     if (item.id == pas){
+        //         var auxNumb = item.resultProd + (aux*item.valorVendido);        
+        //         item.resultProd = parseFloat(auxNumb.toFixed(2));
+        //     }    
+        totalOk();
+        
+      //  })
+       saveProdutos(produtos);
+        var valHist = (aux*produtos[pas].valorVendido)
+        valHist = parseFloat(valHist.toFixed(2));
+        addHistorico(pas,aux,valHist);
+        listaProdutos();
+    }
 }  ;
  
 function criaProdutos(){
@@ -58,7 +60,6 @@ function criaProdutos(){
 function addHistorico(pas,aux,valorHist){
     var data = new Date();
     let Hitorico = JSON.parse(localStorage.getItem('historico')) || [];
-    console.log("valorHist",valorHist)
     Hitorico.push({
         Nome: produtos[pas].nome, 
         hora: `${String(data.getHours())}:${String(data.getMinutes())}:${String(data.getSeconds())} `, 
@@ -70,7 +71,6 @@ return
 }
 
 function saveProdutos(produtos){
-    console.log("saveProdutos",produtos);
     localStorage.setItem('produtos',JSON.stringify(produtos));
  }
  
@@ -79,6 +79,37 @@ function saveHistorico(historico){
  }
  function savePosic(posic){
     localStorage.setItem('posic',JSON.stringify(posic));
+ }
+
+ function somaHist(ident){
+    document.getElementsByTagName('input')[ident].value++;
+  
+ }
+
+ function subtraiHist(ident){
+     if (document.getElementsByTagName('input')[ident].value >0){
+        document.getElementsByTagName('input')[ident].value--;
+     }
+
+ }
+
+
+ function totalOk(){
+    let valorInpu = 0;
+    let nInput = 0;
+    let aux =0;
+
+    for (nInput in produtos){ 
+      aux = parseInt(document.getElementsByTagName('input')[nInput].value);  
+      if(aux > 0){   
+        produtos[nInput].resultProd += (produtos[nInput].valorVendido * aux);
+        let valHist = (aux*produtos[nInput].valorVendido)
+        valHist = parseFloat(valHist.toFixed(2));
+        addHistorico(nInput,aux,valHist);
+      }
+    }
+         saveProdutos(produtos);
+        listaProdutos();
  }
 
 
