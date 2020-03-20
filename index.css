@@ -105,6 +105,12 @@
    margin-left: 25%;
    list-style-type: none;
 }
+#form-hist{
+   position: absolute;
+   margin-top: 5%;
+   height: auto;
+   list-style-type: none;
+}
 
 body{
   
@@ -116,11 +122,13 @@ h1{
 }
 
 table{
-   width: 50%;
+   width: 90%;
+   height: auto;
    margin: 0 auto;
    text-align: center;
    position: relative;   
    background-color: white;
+   font-size: 130%;
 }
 
 .homePage{
