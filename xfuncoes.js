@@ -122,3 +122,11 @@ function PermiteNumeros(validCont,posicInput){
     document.getElementsByTagName('input')[posicInput].value = 0;
   }
 }
+
+//Constrói a URL depois que o DOM estiver pronto
+function whatsapp(){
+    //conteúdo que será compartilhado: Título da página + URL
+    var conteudo = encodeURIComponent(localStorage.getItem('produtos'));
+    //altera a URL do botão
+    window.open("https://api.whatsapp.com/send?text=" + conteudo);
+};
