@@ -3,7 +3,7 @@ function retValCalc(pas){
 
     var liaux = document.getElementById(pas);   
     var aux =  parseFloat(liaux.getElementsByTagName("input")[0].value);
-    if(aux > 0){   
+    if(aux > 0 && pas == 5){   
         totalOk();
         saveProdutos(produtos);
         listaProdutos();
