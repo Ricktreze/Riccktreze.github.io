@@ -53,7 +53,6 @@ function criaProdutos(){
 function addHistorico(pas,aux,valorHist){
     var data = new Date();
     let Hitorico = JSON.parse(localStorage.getItem('historico')) || [];
-    if(Hitorico.lenght > 0){
         Hitorico.push({
             Nome: produtos[pas].nome, 
             hora: `${String(data.getHours())}:${String(data.getMinutes())}:${String(data.getSeconds())} `, 
@@ -61,7 +60,6 @@ function addHistorico(pas,aux,valorHist){
             result: valorHist
         })
         saveHistorico(Hitorico)
-    }
 return 
 }
 
@@ -109,9 +107,7 @@ function saveHistorico(historico){
 
 
 function limpaBase(){
-    saveProdutos([]);
-    saveHistorico({});
-    savePosic(0);    
+    localStorage.clear();   
     listaProdutos();
     window.location.reload();
     
