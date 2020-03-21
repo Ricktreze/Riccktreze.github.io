@@ -33,7 +33,6 @@
    text-align: left;
 }
  a {
-    position: center;
     padding: 0,5%;
     padding-right: 10%;
     margin: 1%;
@@ -42,7 +41,7 @@
     font-family:'Times New Roman', Times, serif;
     font-size: 50%;
     color: rgb(71, 38, 23);
-    
+    width: 100%;
  }
  .imgHome{
     width: 70%;
@@ -99,7 +98,7 @@
 
 #repo-Form{
    position: absolute;
-   margin-top: 5%;
+   margin-top: 8%;
    height: 110%;
    margin-left: 25%;
    list-style-type: none;
