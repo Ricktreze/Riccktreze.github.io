@@ -39,11 +39,11 @@ var toprod = 0;
             var buttonEl = document.createElement('a');
             var linkHist = document.createElement('a');
             var divMenos = document.createElement('div');
-            var linkDivMenos = document.createElement('a');
+            var linkDivMenos = document.createElement('button');
             var imgMenos  = document.createElement('img');
             var imgMais  = document.createElement('img');
             var divMais = document.createElement('div');
-            var linkDivMais = document.createElement('a');
+            var linkDivMais = document.createElement('button');
             var divHist = document.createElement('div');
             var inputHist = document.createElement('a');
             inputHist.setAttribute('id','inputHist');
@@ -59,13 +59,13 @@ var toprod = 0;
             imgMais.setAttribute('id','imgMais');
             imgMais.setAttribute('src','img/maisIcon.png');
             imgMenos.setAttribute('id','imgMenos');
-            linkDivMenos.setAttribute('href','#');
+            linkDivMenos.setAttribute('id','linkDivMenos');
             divMenos.setAttribute('id','divMenos');
             linkDivMenos.setAttribute('onclick',"subtraiHist(" + toprod + ")");
             linkDivMais.setAttribute('onclick',"somaHist(" + toprod + ")");
             linkDivMenos.appendChild(imgMenos);
             linkDivMais.appendChild(imgMais);
-            linkDivMais.setAttribute('href','#');
+            linkDivMais.setAttribute('id','linkDivMais');
             divMais.setAttribute('id','divMais');
             buttonEl.setAttribute('href','#');
             liProd.setAttribute("id",String(toprod));           
@@ -92,17 +92,17 @@ var toprod = 0;
           }
 
           var divTotalLink = document.createElement('div');
-          var aTotalLink = document.createElement('a');
+          var btnTotalLink = document.createElement('button');
           var imgTotalLink = document.createElement('img');
 
           divTotalLink.setAttribute('id','divTotalLink');
-          aTotalLink.setAttribute('id','aTotalLink');
-          aTotalLink.setAttribute('href','#');
+          btnTotalLink.setAttribute('id','btnTotalLink');
+          btnTotalLink.setAttribute('href','#');
           imgTotalLink.setAttribute('id','imgTotalLink');
           imgTotalLink.setAttribute('src','img/okIcon.png');
-          aTotalLink.setAttribute('onclick','totalOk()');
-          aTotalLink.appendChild(imgTotalLink);
-          divTotalLink.appendChild(aTotalLink);
+          btnTotalLink.setAttribute('onclick','totalOk()');
+          btnTotalLink.appendChild(imgTotalLink);
+          divTotalLink.appendChild(btnTotalLink);
           
           formEl.appendChild(divTotalLink);
 
