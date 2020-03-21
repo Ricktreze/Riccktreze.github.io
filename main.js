@@ -35,7 +35,7 @@ var toprod = 0;
               inputEl.setAttribute('class','nobolo');
             }
             inputEl.setAttribute("onblur","retValCalc(" + toprod + ") "); 
-            inputEl.setAttribute("type","text"); 
+            inputEl.setAttribute("type","number"); 
             var buttonEl = document.createElement('a');
             var linkHist = document.createElement('a');
             var divMenos = document.createElement('div');

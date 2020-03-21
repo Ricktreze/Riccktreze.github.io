@@ -116,7 +116,7 @@ function limpaBase(){
 function PermiteNumeros(validCont,posicInput){
     let tecla = String(validCont);
  
-  if(((tecla >= "0") && (tecla <= "9")))
+  if(((tecla >= "0") && (tecla <= "9"))||tecla.length == 0)
    return true
   {
     document.getElementsByTagName('input')[posicInput].value = 0;
