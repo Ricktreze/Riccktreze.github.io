@@ -233,6 +233,8 @@ table{
    background-image: url('img/whatsappIcon.png');
    width: 100px;
    height: 100px;
+   margin-top: 20%;
+   margin-left: 1%;
    background-size: 100px;
    background-repeat: no-repeat;
 }

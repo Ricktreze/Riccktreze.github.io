@@ -126,7 +126,7 @@ function PermiteNumeros(validCont,posicInput){
 //Constrói a URL depois que o DOM estiver pronto
 function whatsapp(){
     //conteúdo que será compartilhado: Título da página + URL
-    var conteudo = encodeURIComponent(localStorage.getItem('produtos'));
+   // produtos = JSON.parse(localStorage.getItem('produtos')) || []
     //altera a URL do botão
-    window.open("https://api.whatsapp.com/send?text=" + conteudo);
+    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(formatText(produtos)));
 };
