@@ -204,14 +204,17 @@ table{
 }
 
 #limpaBase{
-   position: relative;
+   position: absolute;
+   width: 10%;
+   height: 40%;  
+   margin-top: 30%;
    margin-left: 1%;
 
 }
 #inputLimpaBase{
    background-image: url('img/deletIcon.png');
-   width: 5%;
-   height: 10%;
-   background-size: 100%;
-   background-repeat: repeat;
+   width: 100px;
+   height: 100px;
+   background-size: 100px;
+   background-repeat: no-repeat;
 }
