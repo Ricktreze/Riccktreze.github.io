@@ -5,10 +5,7 @@ function retValCalc(pas){
     var aux =  parseFloat(liaux.getElementsByTagName("input")[0].value);
     if(aux > 0){   
         totalOk();
-       saveProdutos(produtos);
-        var valHist = (aux*produtos[pas].valorVendido)
-        valHist = parseFloat(valHist.toFixed(2));
-        addHistorico(pas,aux,valHist);
+        saveProdutos(produtos);
         listaProdutos();
     }
 }  ;
@@ -75,12 +72,14 @@ function saveHistorico(historico){
  }
 
  function somaHist(ident){
-    document.getElementsByTagName('input')[ident].value++;
+    if (PermiteNumeros( document.getElementsByTagName('input')[ident].value,ident)){
+     document.getElementsByTagName('input')[ident].value++;
+    }
   
  }
 
  function subtraiHist(ident){
-     if (document.getElementsByTagName('input')[ident].value >0){
+     if (PermiteNumeros( document.getElementsByTagName('input')[ident].value,ident)){
         document.getElementsByTagName('input')[ident].value--;
      }
 
@@ -94,10 +93,12 @@ function saveHistorico(historico){
 
     for (nInput in produtos){ 
       aux = parseInt(document.getElementsByTagName('input')[nInput].value);  
-      if(aux > 0){   
-        produtos[nInput].resultProd += parseInt((produtos[nInput].valorVendido * aux).toFixed(2));
-        let valHist = (aux*produtos[nInput].valorVendido)
+      if(aux > 0 && PermiteNumeros(aux,nInput)){
+        let valHist = (aux*produtos[nInput].valorVendido)   
         valHist = parseFloat(valHist.toFixed(2));
+        produtos[nInput].resultProd += valHist;
+        
+        
         addHistorico(nInput,aux,valHist);
       }
     }
@@ -106,9 +107,19 @@ function saveHistorico(historico){
  }
 
 
-function limpaBase(){
+function limpaBase(){ 
     localStorage.clear();   
     listaProdutos();
     window.location.reload();
     
+}
+function PermiteNumeros(validCont,posicInput)
+{
+    let tecla = String.fromCharCode(validCont);
+ 
+  if(!((tecla >= "0") && (tecla <= "9")))
+   return true
+  {
+    document.getElementsByTagName('input')[posicInput].value = 0;
+  }
 }

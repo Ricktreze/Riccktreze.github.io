@@ -213,7 +213,7 @@ table{
 #inputLimpaBase{
    background-image: url('img/deletIcon.png');
    width: 5%;
-   height: 3%;
+   height: 10%;
    background-size: 100%;
-   background-repeat: no-repeat;
+   background-repeat: repeat;
 }
