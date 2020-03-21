@@ -70,10 +70,9 @@
  .divSup{
     list-style-type: none;
     background-color:rgb(255, 255, 255);
-    width: 100%;   
-    height: 15%;
-    text-align: center;
-    margin-left: 0%;   
+    width: 20%;   
+    height: auto;
+    margin-left: 30%;   
 
 }
 
