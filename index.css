@@ -161,7 +161,7 @@ table{
 }
 
 #divMais{
-   margin-left:  70%;
+   margin-left:  73%;
    margin-top: -10%;
    width: 10%;
    position: absolute;
@@ -184,15 +184,14 @@ table{
    width: 200%;
    height: auto;
    font-size: 350%;
-   margin-left: 490%;
+   margin-left: 530%;
    margin-top: -55;
 }
 
 
 #divTotalLink{
-   width: 20%;
-   height: auto;
-   margin-left:  50%;
+   width: 40%;
+   margin-left:  40%;
    margin-top: 2%;
    padding-left: 2%;
 }

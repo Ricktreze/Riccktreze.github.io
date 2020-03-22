@@ -27,6 +27,7 @@ var toprod = 0;
             var txtProd = document.createElement("label");
             txtProd.innerHTML = produtos[toprod].nome;
             inputEl = document.createElement('input');
+            inputEl.setAttribute("type","text"); 
             if(txtProd.innerHTML == "Bolo"){
               inputEl.setAttribute('maxlength','3');
               inputEl.setAttribute('class','bolo');
@@ -35,7 +36,7 @@ var toprod = 0;
               inputEl.setAttribute('class','nobolo');
             }
             inputEl.setAttribute("onblur","retValCalc(" + toprod + ") "); 
-            inputEl.setAttribute("type","number"); 
+           
             var buttonEl = document.createElement('a');
             var linkHist = document.createElement('a');
             var divMenos = document.createElement('div');

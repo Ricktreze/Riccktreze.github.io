@@ -95,7 +95,7 @@ function saveHistorico(historico){
       aux = parseInt(document.getElementsByTagName('input')[nInput].value);  
       if(aux > 0 && PermiteNumeros(aux,nInput)){
         let valHist = (aux*produtos[nInput].valorVendido)   
-        valHist = parseFloat(valHist.toFixed(2));
+        valHist = parseInt(valHist.toFixed(2));
         produtos[nInput].resultProd += valHist;
         
         
@@ -125,8 +125,5 @@ function PermiteNumeros(validCont,posicInput){
 
 //Constrói a URL depois que o DOM estiver pronto
 function whatsapp(){
-    //conteúdo que será compartilhado: Título da página + URL
-   // produtos = JSON.parse(localStorage.getItem('produtos')) || []
-    //altera a URL do botão
     window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(formatText(produtos)));
 };
