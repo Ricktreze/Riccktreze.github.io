@@ -27,13 +27,15 @@ var toprod = 0;
             var txtProd = document.createElement("label");
             txtProd.innerHTML = produtos[toprod].nome;
             inputEl = document.createElement('input');
-            inputEl.setAttribute("type","text"); 
+           
             if(txtProd.innerHTML == "Bolo"){
               inputEl.setAttribute('maxlength','3');
               inputEl.setAttribute('class','bolo');
+              inputEl.setAttribute("type","number"); 
             }else{
               inputEl.setAttribute('maxlength','2');
               inputEl.setAttribute('class','nobolo');
+              inputEl.setAttribute("type","text"); 
             }
             inputEl.setAttribute("onblur","retValCalc(" + toprod + ") "); 
            
