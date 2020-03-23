@@ -55,10 +55,10 @@ function saveHistorico(historico){
     let aux =0;
 
     for (nInput in produtos){ 
-      aux = parseInt(document.getElementsByTagName('input')[nInput].value);  
+      aux = parseFloat(document.getElementsByTagName('input')[nInput].value);  
       if(aux > 0 && PermiteNumeros(aux,nInput)){
         let valHist = (aux*produtos[nInput].valorVendido)   
-        valHist = parseInt(valHist.toFixed(2));
+        valHist = parseFloat(valHist.toFixed(2));
         produtos[nInput].resultProd += valHist;
         produtos[5].resultProd += valHist
         
