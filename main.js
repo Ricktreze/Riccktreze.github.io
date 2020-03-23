@@ -32,10 +32,12 @@ var toprod = 0;
               inputEl.setAttribute('maxlength','3');
               inputEl.setAttribute('class','bolo');
               inputEl.setAttribute("type","number"); 
+              inputEl.setAttribute('placeholder',"gm");
             }else{
               inputEl.setAttribute('maxlength','2');
               inputEl.setAttribute('class','nobolo');
               inputEl.setAttribute("type","text"); 
+              inputEl.setAttribute('placeholder',"un");
             }
             inputEl.setAttribute("onblur","retValCalc(" + toprod + ") "); 
            
