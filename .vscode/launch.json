@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:\\doc\\Ricktreze.github.io\\index.html",
+            "url": "C:\\doc\\Ricktreze.github.io\\Ricktreze.github.io\\index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
