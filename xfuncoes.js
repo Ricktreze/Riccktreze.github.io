@@ -58,9 +58,15 @@ function saveHistorico(historico){
       aux = parseFloat(document.getElementsByTagName('input')[nInput].value);  
       if(aux > 0 && PermiteNumeros(aux,nInput)){
         let valHist = (aux*produtos[nInput].valorVendido)   
-        valHist = parseFloat(valHist.toFixed(2));
+        
+        if (produtos[nInput].nome == 'Brigadeiro'){      
+            valHist = parseFloat(valHist.toFixed(2));             
+        }else{
+            valHist = parseInt(valHist.toFixed(2));     
+        }
+
         produtos[nInput].resultProd += valHist;
-        produtos[5].resultProd += valHist
+        produtos[5].resultProd += valHist;
         
         addHistorico(nInput,aux,valHist);
       }
