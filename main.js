@@ -52,7 +52,6 @@ var toprod = 0;
             inputHist.setAttribute('id','inputHist');
             inputHist.setAttribute('href','historico.html');
             inputHist.textContent = "R$ " + produtos[toprod].resultProd
-            produtos[5].resultProd += produtos[toprod].resultProd
             
             divHist.setAttribute('id','divHist');
             divHist.appendChild(inputHist);

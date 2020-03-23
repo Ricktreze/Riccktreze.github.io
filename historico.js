@@ -58,7 +58,6 @@ function addTabelaHist(nomeHist,linkHist){
 }
 
 function delHist(contHist){
-    console.log('delHist',prodAux);
     prodAux.forEach(function(item) {
         if (item.nome == Hitorico[contHist].Nome){
             let auxHist = (item.resultProd - Hitorico[contHist].result)
@@ -66,7 +65,7 @@ function delHist(contHist){
         }
 
     })  
-  
+    prodAux[5].resultProd -= Hitorico[contHist].result
     Hitorico.splice(contHist,1);
     saveProdutos(prodAux);
     saveHistorico(Hitorico);    
