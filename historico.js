@@ -5,7 +5,7 @@ var Hitorico = JSON.parse(localStorage.getItem('historico')) || [];
 var posic = JSON.parse(localStorage.getItem('posic')) || [];
 var nomeProd = '';
 
-    if (fomrHistEl != null){
+    if (fomrHistEl != null){   
         fomrHistEl.appendChild(table);
     }
 
