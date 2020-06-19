@@ -3,7 +3,7 @@ function retValCalc(pas){
 
     var liaux = document.getElementById(pas);   
     var aux =  parseFloat(liaux.getElementsByTagName("input")[0].value);
-    if(aux > 0 && pas == 5){   
+    if(aux > 0 && pas == 7){   
         totalOk();
         saveProdutos(produtos);
         listaProdutos();
@@ -59,14 +59,14 @@ function saveHistorico(historico){
       if(aux > 0 && PermiteNumeros(aux,nInput)){
         let valHist = (aux*produtos[nInput].valorVendido)   
         
-        if (produtos[nInput].nome == 'Brigadeiro'){      
+        if (produtos[nInput].nome == 'Brigadeiro' || produtos[nInput].nome == 'Bom Bom'){      
             valHist = parseFloat(valHist.toFixed(2));             
         }else{
             valHist = parseInt(valHist.toFixed(2));     
         }
 
         produtos[nInput].resultProd += valHist;
-        produtos[5].resultProd += valHist;
+        produtos[8].resultProd += valHist;
         
         addHistorico(nInput,aux,valHist);
       }
